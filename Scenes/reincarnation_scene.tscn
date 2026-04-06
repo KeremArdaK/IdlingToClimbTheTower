@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cirq63vvhwkxk"]
+
+[node name="ReincarnationScene" type="Control" unique_id=823540963]
+visible = false
+layout_mode = 3
+anchors_preset = 0

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bsu5tepqosqj2"]
+
+[node name="SettingsScene" type="Control" unique_id=1948493876]
+visible = false
+layout_mode = 3
+anchors_preset = 0

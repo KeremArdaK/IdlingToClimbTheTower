@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bn0301vxqk0co"]
+
+[node name="CoTGScene" type="Control" unique_id=815781660]
+visible = false
+layout_mode = 3
+anchors_preset = 0

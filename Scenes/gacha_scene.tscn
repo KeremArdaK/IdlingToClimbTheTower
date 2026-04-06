@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bpginwvq6oeiq"]
+
+[node name="GachaScene" type="Control" unique_id=1113725811]
+visible = false
+layout_mode = 3
+anchors_preset = 0

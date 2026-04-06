@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cwwfxdosga8t8"]
+
+[node name="StoryScene" type="Control" unique_id=1896465583]
+visible = false
+layout_mode = 3
+anchors_preset = 0
