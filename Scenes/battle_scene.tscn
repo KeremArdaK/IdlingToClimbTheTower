@@ -1,5 +1,59 @@
 [gd_scene format=3 uid="uid://d25spco12o34c"]
 
+[ext_resource type="Script" uid="uid://bouq1oslrxowp" path="res://Scripts/battle_scene.gd" id="1_hdvqd"]
+[ext_resource type="Texture2D" uid="uid://uk6qkftgi1ij" path="res://icon.svg" id="2_anwxn"]
+
 [node name="BattleScene" type="Control" unique_id=732716863]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdvqd")
+
+[node name="Arena" type="HBoxContainer" parent="." unique_id=1657958741]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -303.0
+offset_top = -274.0
+offset_right = 303.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 350
+
+[node name="PlayerStats" type="VBoxContainer" parent="Arena" unique_id=2141133769]
+layout_mode = 2
+
+[node name="PlayerSprite" type="TextureRect" parent="Arena/PlayerStats" unique_id=528907266]
+layout_mode = 2
+texture = ExtResource("2_anwxn")
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="Arena/PlayerStats" unique_id=232606619]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PlayerATBBar" type="ProgressBar" parent="Arena/PlayerStats" unique_id=1174443130]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="EnemyStats" type="VBoxContainer" parent="Arena" unique_id=1443566831]
+layout_mode = 2
+
+[node name="EnemySprite" type="TextureRect" parent="Arena/EnemyStats" unique_id=1253710375]
+layout_mode = 2
+texture = ExtResource("2_anwxn")
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="Arena/EnemyStats" unique_id=458705916]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="EnemyATBBar" type="ProgressBar" parent="Arena/EnemyStats" unique_id=1866834139]
+unique_name_in_owner = true
+layout_mode = 2

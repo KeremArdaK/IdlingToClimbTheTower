@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://dny7thyccs4hn"]
 
+[ext_resource type="PackedScene" uid="uid://d25spco12o34c" path="res://Scenes/battle_scene.tscn" id="1_21xkr"]
+[ext_resource type="PackedScene" uid="uid://bpginwvq6oeiq" path="res://Scenes/gacha_scene.tscn" id="2_6bp64"]
+[ext_resource type="PackedScene" uid="uid://cwwfxdosga8t8" path="res://Scenes/story_scene.tscn" id="3_344ge"]
+[ext_resource type="PackedScene" uid="uid://cirq63vvhwkxk" path="res://Scenes/reincarnation_scene.tscn" id="4_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://bn0301vxqk0co" path="res://Scenes/co_tg_scene.tscn" id="5_hptm8"]
+[ext_resource type="PackedScene" uid="uid://bsu5tepqosqj2" path="res://Scenes/settings_scene.tscn" id="6_d1ilt"]
+
 [sub_resource type="Gradient" id="Gradient_7u77a"]
-offsets = PackedFloat32Array(0.008928572, 1)
+offsets = PackedFloat32Array(0, 0.4017857)
 colors = PackedColorArray(0.4539513, 0.11916346, 0, 1, 0.3153558, 0.12643671, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_jjgbg"]
@@ -36,8 +43,6 @@ fill_to = Vector2(0.7923387, 0.08669355)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21xkr"]
 texture = SubResource("GradientTexture2D_bo1nx")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bp64"]
-
 [sub_resource type="ButtonGroup" id="ButtonGroup_344ge"]
 
 [node name="Control" type="Control" unique_id=207772442]
@@ -70,68 +75,68 @@ theme_override_constants/separation = 39
 alignment = 1
 
 [node name="BattleBtn" type="Button" parent="HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1067124318]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 75)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_bo1nx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jjvhh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_21xkr")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_6bp64")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_344ge")
 text = "Battle"
 
 [node name="GachaBtn" type="Button" parent="HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1425754686]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 75)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_bo1nx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jjvhh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_21xkr")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_6bp64")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_344ge")
 text = "Gacha"
 
 [node name="StoryBtn" type="Button" parent="HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1681812076]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 75)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_bo1nx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jjvhh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_21xkr")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_6bp64")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_344ge")
 text = "Story"
 
 [node name="ReincarnationBtn" type="Button" parent="HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1813396651]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 75)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_bo1nx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jjvhh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_21xkr")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_6bp64")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_344ge")
 text = "Reincarnation"
 
 [node name="CoTGBtn" type="Button" parent="HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=541201646]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 75)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_bo1nx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jjvhh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_21xkr")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_6bp64")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_344ge")
 text = "Core of The God"
 autowrap_mode = 3
 
 [node name="SettingsBtn" type="Button" parent="HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1177552919]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 75)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_bo1nx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jjvhh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_21xkr")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_6bp64")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_344ge")
 text = "Settings"
@@ -140,25 +145,20 @@ text = "Settings"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Control" type="Control" parent="HBoxContainer/MarginContainer" unique_id=1294094666]
+[node name="BattleScene" parent="HBoxContainer/MarginContainer" unique_id=732716863 instance=ExtResource("1_21xkr")]
 layout_mode = 2
 
-[node name="Control2" type="Control" parent="HBoxContainer/MarginContainer" unique_id=1434271348]
-visible = false
+[node name="GachaScene" parent="HBoxContainer/MarginContainer" unique_id=1113725811 instance=ExtResource("2_6bp64")]
 layout_mode = 2
 
-[node name="Control3" type="Control" parent="HBoxContainer/MarginContainer" unique_id=49745225]
-visible = false
+[node name="StoryScene" parent="HBoxContainer/MarginContainer" unique_id=1896465583 instance=ExtResource("3_344ge")]
 layout_mode = 2
 
-[node name="Control4" type="Control" parent="HBoxContainer/MarginContainer" unique_id=57552821]
-visible = false
+[node name="ReincarnationScene" parent="HBoxContainer/MarginContainer" unique_id=823540963 instance=ExtResource("4_ynf5e")]
 layout_mode = 2
 
-[node name="Control5" type="Control" parent="HBoxContainer/MarginContainer" unique_id=841511286]
-visible = false
+[node name="CoTGScene" parent="HBoxContainer/MarginContainer" unique_id=815781660 instance=ExtResource("5_hptm8")]
 layout_mode = 2
 
-[node name="Control6" type="Control" parent="HBoxContainer/MarginContainer" unique_id=1857837351]
-visible = false
+[node name="SettingsScene" parent="HBoxContainer/MarginContainer" unique_id=1948493876 instance=ExtResource("6_d1ilt")]
 layout_mode = 2
